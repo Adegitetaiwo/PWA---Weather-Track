@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title bar logo -->
+    <link rel="shortcut icon" href="/img/logos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/fonts/icomoon/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/img/logos/logo.png">
+    <meta name="theme-color" content="#c0fac9"> 
+    <!--  -->
+
+    <title>Weather Track</title>
+</head>
+<body>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsEDxVftD08szOHRxwgSxeNs_qC709SY0&libraries=places"></script>
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', function () {
+            var places = new google.maps.places.Autocomplete(document.getElementById('city'));
+            google.maps.event.addListener(places, 'place_changed', function () {
+
+            });
+        });
+    </script> -->
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+        <div class="nav_container">
+        <nav class="weather_nav" >
+            <h1>My Weather Track</h1>
+            <ul >
+                <li>
+                    <a name="freeStyle">
+                        <img src="/img/icons/animated/weather.svg" alt="">
+                    </a>
+                </li>
+                <li><a class="active" href="#">Today</a></li>
+                <li><a href="#other_days">Daily Forcast</a></li>
+            </ul>
+        </nav>
+        </div>
+
+    </header>
+    <form  id="cityForm" action="/">
+        <input type="search" id="city" placeholder="Type a City Name and Press Enter ex: Lagos" autofocus>
+    </form>
+
+    <main class="active_weather">
+        <div id="error-message-box">
+            <p id="error-message-text"></p>
+        </div>
+        <div class="container">
+            <p id="description"> -- -- </p>
+            <p class="">
+                <img id="icon_img" width="150" height="150" src="img/icons/unknown.png" alt="Icon">
+            </p>
+            <ul class="temp_one">
+                <li>
+                    <p id="active_temp"> - - °c</p>
+                </li>
+
+            </ul>
+            <ul class="temp_two">
+                <li><p id="min_temp"> - - °c</p></li>
+                <li><p id="max_temp"> - - °c</p></li>
+            </ul>
+            <div class="city_country">
+                <p id="city_country"> -- , -- </p>
+            </div>
+
+        </div>
+    </main>
+
+
+    <a name="other_days"></a>
+    <section>
+        
+        <div class="other_days_section_container">
+            <h1 id="other_days_label">Daily Forcast</h1>
+        <div class="other_days_section" id="other_days_section">
+
+            <ul>
+                <li>
+                    <div class="container other_day">
+                        <p class="dailyDate">- - -</p>
+                        <p class=""><img id="icon_img" class="icon_img" src="img/icons/unknown.png" alt="Icon"></p>
+                        <ul class="first_temp">
+                            <li>
+                                <p id="dailyDescription" class="dailyDescription"> - - </p>
+                            </li>
+                
+                        </ul>
+                        <ul class="second_temp">
+                            <li>
+                                <p class="daily_min_temp">- -°c</p>
+                            </li>
+                            <li>
+                                <p class="daily_next_temp">- -°c</p>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </li>
+                <li>
+                    <div class="container other_day">
+                        <p class="dailyDate">- - -</p>
+                        <p class=""><img id="icon_img" class="icon_img" src="img/icons/unknown.png" alt="Icon"></p>
+                        <ul class="first_temp">
+                            <li>
+                                <p id="dailyDescription" class="dailyDescription"> - - </p>
+                            </li>
+                
+                        </ul>
+                        <ul class="second_temp">
+                            <li>
+                                <p class="daily_min_temp">- -°c</p>
+                            </li>
+                            <li>
+                                <p class="daily_next_temp">- -°c</p>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </li>
+                <li>
+                    <div class="container other_day">
+                        <p class="dailyDate">- - -</p>
+                        <p class=""><img id="icon_img" class="icon_img" src="img/icons/unknown.png" alt="Icon"></p>
+                        <ul class="first_temp">
+                            <li>
+                                <p id="dailyDescription" class="dailyDescription"> - - </p>
+                            </li>
+                
+                        </ul>
+                        <ul class="second_temp">
+                            <li>
+                                <p class="daily_min_temp">- -°c</p>
+                            </li>
+                            <li>
+                                <p class="daily_next_temp">- -°c</p>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </li>
+                <li>
+                    <div class="container other_day">
+                        <p class="dailyDate">- - -</p>
+                        <p class=""><img id="icon_img" class="icon_img" src="img/icons/unknown.png" alt="Icon"></p>
+                        <ul class="first_temp">
+                            <li>
+                                <p id="dailyDescription" class="dailyDescription"> - - </p>
+                            </li>
+                
+                        </ul>
+                        <ul class="second_temp">
+                            <li>
+                                <p class="daily_min_temp">- -°c</p>
+                            </li>
+                            <li>
+                                <p class="daily_next_temp">- -°c</p>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </li>
+                <li>
+                    <div class="container other_day">
+                        <p class="dailyDate">- - -</p>
+                        <p class=""><img id="icon_img" class="icon_img" src="img/icons/unknown.png" alt="Icon"></p>
+                        <ul class="first_temp">
+                            <li>
+                                <p id="dailyDescription" class="dailyDescription"> - - </p>
+                            </li>
+                
+                        </ul>
+                        <ul class="second_temp">
+                            <li>
+                                <p class="daily_min_temp">- -°c</p>
+                            </li>
+                            <li>
+                                <p class="daily_next_temp">- -°c</p>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </li>
+                <li>
+                    <div class="container other_day">
+                        <p class="dailyDate">- - -</p>
+                        <p class=""><img id="icon_img" class="icon_img" src="img/icons/unknown.png" alt="Icon"></p>
+                        <ul class="first_temp">
+                            <li>
+                                <p id="dailyDescription" class="dailyDescription"> - - </p>
+                            </li>
+                
+                        </ul>
+                        <ul class="second_temp">
+                            <li>
+                                <p class="daily_min_temp">- -°c</p>
+                            </li>
+                            <li>
+                                <p class="daily_next_temp">- -°c</p>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </li>
+                <li>
+                    <div class="container other_day">
+                        <p class="dailyDate">- - -</p>
+                        <p class=""><img id="icon_img" class="icon_img" src="img/icons/unknown.png" alt="Icon"></p>
+                        <ul class="first_temp">
+                            <li>
+                                <p id="dailyDescription" class="dailyDescription"> - - </p>
+                            </li>
+                
+                        </ul>
+                        <ul class="second_temp">
+                            <li>
+                                <p class="daily_min_temp">- -°c</p>
+                            </li>
+                            <li>
+                                <p class="daily_next_temp">- -°c</p>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </li>
+                <li>
+                    <div class="container other_day">
+                        <p class="dailyDate">- - -</p>
+                        <p class=""><img id="icon_img" class="icon_img" src="img/icons/unknown.png" alt="Icon"></p>
+                        <ul class="first_temp">
+                            <li>
+                                <p id="dailyDescription" class="dailyDescription"> - - </p>
+                            </li>
+                
+                        </ul>
+                        <ul class="second_temp">
+                            <li>
+                                <p class="daily_min_temp">- -°c</p>
+                            </li>
+                            <li>
+                                <p class="daily_next_temp">- -°c</p>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </section>
+    
+    <footer>
+        <ul>
+            <li><a href="https://twitter.com/Taiwoadegite" class="icon-twitter" target="_blank"></a></li>
+            <li><a href="https://github.com/Adegitetaiwo" class="icon-github" target="_blank"></a></li>
+        </ul>
+        <br>
+        <small>Developed with <span class="icon-heart"></span> by adegitetaiwo</small>
+    </footer>
+
+
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.20.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.20.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
+</html>
