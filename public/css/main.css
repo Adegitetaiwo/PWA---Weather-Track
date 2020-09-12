@@ -79,7 +79,7 @@ input#city:focus {
     margin-top: 20px;
     background: rgb(240, 134, 134);
     width: 20rem;
-    height: 40px;
+    height: 45px;
     border-radius: 20px;
     text-align: center;
     display: none;
