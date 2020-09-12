@@ -1,7 +1,7 @@
 
 // app key and constant
 const kelvin = 273
-let key = '751f7a0b8dba53261d72fe31c6466efb'
+let key = 'MY_API_KEY'
 
 
 cityForm.addEventListener('submit', (e)=>{
